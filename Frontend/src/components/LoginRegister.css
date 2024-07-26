@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  @apply m-0 p-0 box-border;
+  font-family: 'Poppins', sans-serif;
+}
+
+section .container {
+  @apply relative w-full max-w-4xl h-[500px] bg-white shadow-lg overflow-hidden transition-transform duration-500;
+}
+
+section .container .user {
+  @apply absolute inset-0 flex;
+}
+
+section .container .user .imgBx {
+  @apply relative w-1/2 h-full bg-yellow-300 transition-transform duration-500;
+}
+
+section .container .user .formBx {
+  @apply relative w-1/2 h-full bg-white flex justify-center items-center p-10 transition-transform duration-500;
+}
+
+section .container .user .formBx form h2 {
+  @apply text-lg font-semibold uppercase tracking-wider text-center mb-5 text-gray-700;
+}
+
+section .container .user .formBx form input {
+  @apply w-full p-2 bg-gray-200 text-gray-800 border-none outline-none mb-3;
+}
+
+section .container .user .formBx form input[type='submit'] {
+  @apply w-full max-w-[100px] p-2 bg-blue-600 text-white cursor-pointer font-medium tracking-wider transition-colors duration-500;
+}
+
+section .container .user .formBx form .signup {
+  @apply mt-5 text-sm tracking-wider text-gray-700 uppercase font-light;
+}
+
+section .container .user .formBx form .signup a {
+  @apply font-semibold text-blue-600;
+}
+
+section .container.active .signupBx {
+  @apply translate-x-0;
+}
+
+section .container.active .signinBx {
+  @apply -translate-x-full;
+}
+
+@media (max-width: 991px) {
+  section .container {
+    @apply max-w-md;
+  }
+
+  section .container .imgBx {
+    @apply hidden;
+  }
+
+  section .container .user .formBx {
+    @apply w-full;
+  }
+}
